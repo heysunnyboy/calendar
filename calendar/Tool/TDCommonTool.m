@@ -87,7 +87,7 @@
  *
  获取上个月或者下个月的nsdate
  */
-+(NSDate *)getMonthOfDate:(NSDate *)date isLastMonth:(BOOL)isLastMonth{
++ (NSDate *)getMonthOfDate:(NSDate *)date isLastMonth:(BOOL)isLastMonth{
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];//东八区时间
     [formatter setDateFormat:@"yyyy"];
@@ -122,7 +122,7 @@
     monthDate = [monthDate dateByAddingTimeInterval:timeZoneOffset];
     return monthDate;
 }
-+(NSInteger )getYearFromDate:(NSDate *)date{
++ (NSInteger )getYearFromDate:(NSDate *)date{
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];//东八区时间
     [formatter setDateFormat:@"yyyy"];
@@ -130,7 +130,7 @@
     return currentYear;
     
 }
-+(NSInteger )getMonthFromDate:(NSDate *)date{
++ (NSInteger )getMonthFromDate:(NSDate *)date{
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];//东八区时间
     [formatter setDateFormat:@"MM"];
